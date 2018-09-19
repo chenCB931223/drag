@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 500px;
+    height: 10px;
+    margin: 30px auto;
+}
+
+.box1 {
+    width: 500px;
+    height: 10px;
+    margin-top: 10px;
+    background-color: red;
+    position: relative;
+    border-radius: 3px;
+}
+
+.underlist {
+    margin: 60px auto;
+    width: 500px;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.underlist li {
+    float: left;
+    width: 100px;
+    height: 10px;
+    list-style: none;
+    border-bottom: 1px solid #f00;
+    border-left: 1px solid #f00;
+    box-sizing: border-box;
+}
+
+.underlist li:last-child {
+    border-right: 1px solid #f00;
+}
+
+.grounp {
+    width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.grounp p {
+    width: 100px;
+    float: left;
+    text-align: center;
+}
+
+.box2 {
+    width: 500px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.box2 p {
+    width: 20px;
+    height: 10px;
+}
+
+.move_box {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    cursor: pointer;
+    background-color: blue;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+}
+
+.move_box::after {
+    content: attr(data-size);
+    display: block;
+    position: absolute;
+    top: -25px;
+}
+
+.move_box:hover,
+.move_box:active {
+    background-color: green;
+}
+
+span.num {
+    display: block;
+}
