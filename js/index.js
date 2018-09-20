@@ -6,6 +6,7 @@ $(function() {
     var fSize = samples / $div_width;
 
     var active = function(e) {
+        e.stopPropagation();
         var ox = e.clientX;
         var moveLeft = $('#move').position().left;
 
@@ -22,11 +23,12 @@ $(function() {
 
         $(document).on('mousemove', handle);
         $(document).on('mouseup', function() {
-            $(document).unbind();
+            $(document).off('mousemove',handle);
         });
     };
     $('#move').on('mousedown', active);
     $('#bl').on('mousedown', function(e) {
+        numSize(e.originalEvent.layerX);
         active(e);
     });
 
