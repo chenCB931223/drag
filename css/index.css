@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    user-select: none;
+}
+
 .box {
     width: 500px;
     height: 10px;
